@@ -3,8 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-/MNIST_data
+MNIST_data/
 /MNIST_Neural_Network.ckpt.data-00000-of-00001
+99%_model_assets/
 
 # C extensions
 *.so
