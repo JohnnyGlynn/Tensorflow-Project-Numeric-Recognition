@@ -21,15 +21,14 @@ def uploadfile():
 @app.route("/whoa")
 def whoa():
     # Add ops to save and restore all the variables.
-   # saver = tf.train.Saver()
+    saver = tf.train.Saver()
 
     # Later, launch the model, use the saver to restore variables from disk, and
     # do some work with the model.
-    #with tf.Session() as sess:
+    with tf.Session() as sess:
     # Restore variables from disk.
-     #   saver.restore(sess, "./MNIST_Neural_Network.ckpt")
-      #  return("Model restored.")
-      return render_template('index.html')
+        saver.restore(sess, "./mnist92/mnist92.ckpt")
+        return("Model restored.")
 
 if __name__ == "__main__":
     app.run(debug=True)
